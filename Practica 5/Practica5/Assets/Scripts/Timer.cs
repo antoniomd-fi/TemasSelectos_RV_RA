@@ -40,6 +40,9 @@ public class Timer : MonoBehaviour
         {
             SceneManager.LoadScene("Laberinto");
         }
-
+        
+    
     }
+
+  
 }
