@@ -43,6 +43,10 @@ public class Timer : MonoBehaviour
         
     
     }
+    
+    public voud restartTime(){
+    
+    }
 
   
 }
