@@ -11,6 +11,9 @@ public class Timer : MonoBehaviour
     private Text text;
     private float timeFrame = 0f;
     private float timeView=150;
+    private bool start= false;
+    private bool pause= false;
+    public GameObject winCanvas;
     void Start()
     {
         text = GetComponent<Text>();
@@ -19,9 +22,12 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        timeFrame = Time.deltaTime;
-        timeView -= timeFrame;
-        ActualizarReloj(timeView);
+        if (start==true && pause==false &&winCanvas.activeInHierarchy==false){
+            timeFrame = Time.deltaTime;
+            timeView -= timeFrame;
+            ActualizarReloj(timeView);
+        }
+
     }
 
     public void ActualizarReloj( float time)
@@ -44,8 +50,19 @@ public class Timer : MonoBehaviour
     
     }
     
-    public voud restartTime(){
-    
+    public void startGame(){
+        start=true;
+    }
+
+    public void pauseGame(){
+        if (pause==false){
+            pause=true;
+        }
+        else
+            pause=false;
+    }
+    public void restart(){
+        SceneManager.LoadScene("Laberinto");
     }
 
   
