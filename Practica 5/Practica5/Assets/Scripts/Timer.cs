@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     private float speed;
     private Text text;
     private float timeFrame = 0f;
-    private float timeView=150;
+    private float timeView=200;
     private bool start= false;
     private bool pause= false;
     public GameObject winCanvas;
